@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-08-18T18:40:06.913Z",
+  "claveAccesoOriginal": "1308202501120603993300110010010000001181321514411",
+  "recepcionResponse": {
+    "RespuestaRecepcionComprobante": {
+      "estado": "RECIBIDA",
+      "comprobantes": null
+    }
+  },
+  "analisis": {
+    "estadoRecepcion": "RECIBIDA",
+    "tieneComprobantes": false,
+    "tieneClaveAcceso": false
+  }
+}

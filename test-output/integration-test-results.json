@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-08-18T17:20:18.669Z",
+  "invoiceData": {
+    "ambiente": "1",
+    "tipoEmision": "1",
+    "razonSocial": "CAMPUZANO ARECHUA GUILLERMO ARMANDO",
+    "nombreComercial": "CAMPUZANO ARECHUA GUILLERMO ARMANDO",
+    "ruc": "1206039933001",
+    "claveAcceso": "1808202501120603993300110010010000001189711100710",
+    "codDoc": "01",
+    "estab": "001",
+    "ptoEmi": "001",
+    "secuencial": "000000118",
+    "dirMatriz": "Los RIOS",
+    "fechaEmision": "18/08/2025",
+    "obligadoContabilidad": "NO",
+    "tipoIdentificacionComprador": "04",
+    "razonSocialComprador": "COMERCIALIZADORA DE MEDIOS CONEXION ECUADOR MCE CIA LTDA",
+    "identificacionComprador": "1792240190001",
+    "totalSinImpuestos": 150,
+    "totalDescuento": 0,
+    "totalConImpuestos": [
+      {
+        "codigo": "2",
+        "codigoPorcentaje": "4",
+        "baseImponible": 150,
+        "tarifa": 15,
+        "valor": 22.5
+      }
+    ],
+    "propina": 0,
+    "importeTotal": 172.5,
+    "moneda": "DOLAR",
+    "pagos": [
+      {
+        "formaPago": "20",
+        "total": 172.5,
+        "unidadTiempo": "dias"
+      }
+    ],
+    "detalles": [
+      {
+        "codigoPrincipal": "12",
+        "descripcion": "Servicio de Azure en la nube",
+        "cantidad": 1,
+        "precioUnitario": 150,
+        "descuento": 0,
+        "precioTotalSinImpuesto": 150,
+        "impuestos": [
+          {
+            "codigo": "2",
+            "codigoPorcentaje": "4",
+            "tarifa": 15,
+            "baseImponible": 150,
+            "valor": 22.5
+          }
+        ]
+      }
+    ],
+    "infoAdicional": [
+      {
+        "nombre": "Direccion",
+        "valor": "Avenida 6 de Diciembre N34-360 y Avenida Portugal"
+      },
+      {
+        "nombre": "Telefono",
+        "valor": "099450266"
+      },
+      {
+        "nombre": "IDCodigo",
+        "valor": "10"
+      },
+      {
+        "nombre": "Email",
+        "valor": "dfresanh@conexionecuador.ec;recepcion_documentos_electronicos@conexionecuador.ec"
+      },
+      {
+        "nombre": "VALOR_LETRAS",
+        "valor": "CIENTO SETENTA Y DOS DOLAR 50/100 DOLAR"
+      }
+    ]
+  },
+  "recepcionResult": {
+    "estado": "RECIBIDA"
+  },
+  "success": true
+}

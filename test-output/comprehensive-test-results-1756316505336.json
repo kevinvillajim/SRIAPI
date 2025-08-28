@@ -1,0 +1,52 @@
+{
+  "xmlGeneration": {
+    "success": true,
+    "xmlPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\Proyecto de Programación\\Proyectos Personales\\APISRI\\test-output\\comprehensive-test-1756316505143.xml",
+    "signedXmlPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\Proyecto de Programación\\Proyectos Personales\\APISRI\\test-output\\comprehensive-test-1756316505143_firmado.xml"
+  },
+  "xsdValidation": {
+    "success": true,
+    "errors": [],
+    "warnings": []
+  },
+  "referenceValidation": {
+    "success": false,
+    "matchPercentage": 0,
+    "differences": [
+      {
+        "type": "different_value",
+        "element": "infoTributaria",
+        "expected": "1\n        1\n        razonSocial0\n        nombreComercial0\n        0000000000001\n        0000000000000000000000000000000000000000000000000\n        00\n        000\n        000\n        000000000\n        dirMatriz0\n        0\n        CONTRIBUYENTE RÉGIMEN RIMPE",
+        "actual": "11BUSINESSCONNECT S.A.S.BUSINESSCONNECT1793204144001270820250117932041440011001001316505097519301891601001001316505097RAMIREZ DAVALOS Y AV. AMAZONAS EDIFICIO CENTRO AMAZONAS OF. 402",
+        "path": "/infoTributaria[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "ruc",
+        "expected": "0000000000001",
+        "actual": "1793204144001",
+        "path": "/infoTributaria[0]/ruc[0]/"
+      }
+    ]
+  },
+  "sriValidation": {
+    "recepcion": {
+      "success": false,
+      "mensajes": []
+    },
+    "autorizacion": {
+      "success": false,
+      "mensajes": []
+    }
+  },
+  "summary": {
+    "overallSuccess": false,
+    "score": 50,
+    "recommendations": [
+      "✅ Formato UANATACA CA2 2016 validado correctamente",
+      "⚠️ Saltando validación SRI por errores previos",
+      "⚠️ MEDIO: Mejorar coincidencia con XML de referencia",
+      "⚠️ MEDIO: Revisar compatibilidad con ambiente SRI"
+    ]
+  }
+}

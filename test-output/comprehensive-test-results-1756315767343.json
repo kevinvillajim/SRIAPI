@@ -1,0 +1,33 @@
+{
+  "xmlGeneration": {
+    "success": false,
+    "error": "Clave base debe tener exactamente 48 dígitos. Construida: 49"
+  },
+  "xsdValidation": {
+    "success": false,
+    "errors": [],
+    "warnings": []
+  },
+  "referenceValidation": {
+    "success": false,
+    "matchPercentage": 0,
+    "differences": []
+  },
+  "sriValidation": {
+    "recepcion": {
+      "success": false,
+      "mensajes": []
+    },
+    "autorizacion": {
+      "success": false,
+      "mensajes": []
+    }
+  },
+  "summary": {
+    "overallSuccess": false,
+    "score": 0,
+    "recommendations": [
+      "❌ CRÍTICO: Generación de XML falla - revisar XMLBuilderService"
+    ]
+  }
+}

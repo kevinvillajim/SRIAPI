@@ -1,0 +1,66 @@
+{
+  "xmlGeneration": {
+    "success": true,
+    "xmlPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\Proyecto de Programación\\Proyectos Personales\\APISRI\\test-output\\comprehensive-test-1756316721444.xml",
+    "signedXmlPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\Proyecto de Programación\\Proyectos Personales\\APISRI\\test-output\\comprehensive-test-1756316721444_firmado.xml"
+  },
+  "xsdValidation": {
+    "success": true,
+    "errors": [],
+    "warnings": []
+  },
+  "referenceValidation": {
+    "success": false,
+    "matchPercentage": 0,
+    "differences": [
+      {
+        "type": "different_value",
+        "element": "infoTributaria",
+        "expected": "1\n        1\n        razonSocial0\n        nombreComercial0\n        0000000000001\n        0000000000000000000000000000000000000000000000000\n        00\n        000\n        000\n        000000000\n        dirMatriz0\n        0\n        CONTRIBUYENTE RÉGIMEN RIMPE",
+        "actual": "11BUSINESSCONNECT S.A.S.BUSINESSCONNECT1793204144001270820250117932041440011001001316721406480406521001001001316721406RAMIREZ DAVALOS Y AV. AMAZONAS EDIFICIO CENTRO AMAZONAS OF. 4020CONTRIBUYENTE RÉGIMEN RIMPE",
+        "path": "/infoTributaria[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "ruc",
+        "expected": "0000000000001",
+        "actual": "1793204144001",
+        "path": "/infoTributaria[0]/ruc[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "infoFactura",
+        "expected": "01/01/2000\n        dirEstablecimiento0\n        contribuyente\n        SI\n        EXPORTADOR\n        A\n        lugarIncoTerm0\n        000\n        puertoEmbarque0\n        puertoDestino0\n        000\n        000\n        04\n        000-000-000000000\n        razonSocialComprador0\n        identificacionCompra\n        direccionComprador0\n        50.00\n        50.00\n        A\n        0.00\n        00\n        50.00\n        50.00\n        50.00\n        \n            \n                2\n                0\n                0.00\n                50.00\n                49.50\n                50.00\n                50.00\n            \n            \n                2\n                0\n                0.00\n                50.00\n                49.50\n                50.00\n                50.00\n            \n        \n        \n            \n                1\n                49.50\n                50.00\n            \n            \n                1\n                49.50\n                50.00\n            \n        \n        50.00\n        50.00\n        50.00\n        50.00\n        50.00\n        50.00\n        moneda0\n        placa0\n        \n            \n                01\n                50.00\n                50.00\n                unidadTiem\n            \n            \n                01\n                50.00\n                50.00\n                unidadTiem\n            \n        \n        50.00\n        50.00",
+        "actual": "27/08/2025RAMIREZ DAVALOS Y AV. AMAZONAS EDIFICIO CENTRO AMAZONAS OF. 402contribuyenteSIEXPORTADORAlugarIncoTerm0000puertoEmbarque0puertoDestino000000004000-000-000000000PRUEBAS TECNICAS SISTEMA REAL CIA LTDA1792146739001direccionComprador0114.1850.00A0.0024114.1815.0017.1350.0050.0050.0050.0050.00131.30moneda0",
+        "path": "/infoFactura[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "identificacionComprador",
+        "expected": "identificacionCompra",
+        "actual": "1792146739001",
+        "path": "/infoFactura[0]/identificacionComprador[0]/"
+      }
+    ]
+  },
+  "sriValidation": {
+    "recepcion": {
+      "success": false,
+      "mensajes": []
+    },
+    "autorizacion": {
+      "success": false,
+      "mensajes": []
+    }
+  },
+  "summary": {
+    "overallSuccess": false,
+    "score": 50,
+    "recommendations": [
+      "✅ Formato UANATACA CA2 2016 validado correctamente",
+      "⚠️ Saltando validación SRI por errores previos",
+      "⚠️ MEDIO: Mejorar coincidencia con XML de referencia",
+      "⚠️ MEDIO: Revisar compatibilidad con ambiente SRI"
+    ]
+  }
+}

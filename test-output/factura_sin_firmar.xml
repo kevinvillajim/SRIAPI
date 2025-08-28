@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>CAMPUZANO ARECHUA GUILLERMO ARMANDO</razonSocial>
+    <nombreComercial>CAMPUZANO ARECHUA GUILLERMO ARMANDO</nombreComercial>
+    <ruc>1206039933001</ruc>
+    <claveAcceso>1808202501120603993300110010010000001189711100710</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000118</secuencial>
+    <dirMatriz>Los RIOS</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>18/08/2025</fechaEmision>
+    <obligadoContabilidad>NO</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>COMERCIALIZADORA DE MEDIOS CONEXION ECUADOR MCE CIA LTDA</razonSocialComprador>
+    <identificacionComprador>1792240190001</identificacionComprador>
+    <totalSinImpuestos>150.00</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <baseImponible>150.00</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>22.50</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>172.50</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>172.50</total>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>12</codigoPrincipal>
+      <descripcion>Servicio de Azure en la nube</descripcion>
+      <cantidad>1.000000</cantidad>
+      <precioUnitario>150.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>150.00</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>150.00</baseImponible>
+          <valor>22.50</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">Avenida 6 de Diciembre N34-360 y Avenida Portugal</campoAdicional>
+    <campoAdicional nombre="Telefono">099450266</campoAdicional>
+    <campoAdicional nombre="IDCodigo">10</campoAdicional>
+    <campoAdicional nombre="Email">dfresanh@conexionecuador.ec;recepcion_documentos_electronicos@conexionecuador.ec</campoAdicional>
+    <campoAdicional nombre="VALOR_LETRAS">CIENTO SETENTA Y DOS DOLAR 50/100 DOLAR</campoAdicional>
+  </infoAdicional>
+</factura>

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-08-18T23:15:35.814Z",
+  "emisor": {
+    "ruc": "1793204144001",
+    "razonSocial": "BUSINESSCONNECT S.A.S."
+  },
+  "comprobante": {
+    "claveAcceso": "1808202501179320414400110010010000000016720949918",
+    "tipo": "FACTURA",
+    "numero": "001-001-000000001"
+  },
+  "sri": {
+    "recepcion": {
+      "estado": "RECIBIDA",
+      "mensajes": []
+    },
+    "autorizacion": "Consultada"
+  },
+  "archivos": {
+    "xmlSinFirmar": "1808202501179320414400110010010000000016720949918.xml",
+    "xmlFirmado": "1808202501179320414400110010010000000016720949918_firmado.xml"
+  }
+}

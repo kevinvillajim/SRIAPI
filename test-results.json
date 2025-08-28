@@ -1,0 +1,9 @@
+{
+  "recepcion": {
+    "RespuestaRecepcionComprobante": {
+      "estado": "RECIBIDA",
+      "comprobantes": null
+    }
+  },
+  "timestamp": "2025-08-18T17:14:22.609Z"
+}

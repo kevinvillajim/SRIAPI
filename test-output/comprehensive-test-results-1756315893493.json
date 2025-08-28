@@ -1,0 +1,322 @@
+{
+  "xmlGeneration": {
+    "success": true,
+    "xmlPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\Proyecto de Programación\\Proyectos Personales\\APISRI\\test-output\\comprehensive-test-1756315893294.xml",
+    "signedXmlPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\Proyecto de Programación\\Proyectos Personales\\APISRI\\test-output\\comprehensive-test-1756315893294_firmado.xml"
+  },
+  "xsdValidation": {
+    "success": true,
+    "errors": [],
+    "warnings": []
+  },
+  "referenceValidation": {
+    "success": false,
+    "matchPercentage": 49,
+    "differences": [
+      {
+        "type": "different_value",
+        "element": "infoTributaria",
+        "expected": "1\n        1\n        razonSocial0\n        nombreComercial0\n        0000000000001\n        0000000000000000000000000000000000000000000000000\n        00\n        000\n        000\n        000000000\n        dirMatriz0\n        0\n        CONTRIBUYENTE RÉGIMEN RIMPE",
+        "actual": "11BUSINESSCONNECT S.A.S.BUSINESSCONNECT1793204144001270820250117932041440011001001315893253368013411201001001315893253RAMIREZ DAVALOS Y AV. AMAZONAS EDIFICIO CENTRO AMAZONAS OF. 402",
+        "path": "/infoTributaria[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "ruc",
+        "expected": "0000000000001",
+        "actual": "1793204144001",
+        "path": "/infoTributaria[0]/ruc[0]/"
+      },
+      {
+        "type": "missing",
+        "element": "agenteRetencion",
+        "path": "/infoTributaria[0]/agenteRetencion"
+      },
+      {
+        "type": "missing",
+        "element": "contribuyenteRimpe",
+        "path": "/infoTributaria[0]/contribuyenteRimpe"
+      },
+      {
+        "type": "different_value",
+        "element": "infoFactura",
+        "expected": "01/01/2000\n        dirEstablecimiento0\n        contribuyente\n        SI\n        EXPORTADOR\n        A\n        lugarIncoTerm0\n        000\n        puertoEmbarque0\n        puertoDestino0\n        000\n        000\n        04\n        000-000-000000000\n        razonSocialComprador0\n        identificacionCompra\n        direccionComprador0\n        50.00\n        50.00\n        A\n        0.00\n        00\n        50.00\n        50.00\n        50.00\n        \n            \n                2\n                0\n                0.00\n                50.00\n                49.50\n                50.00\n                50.00\n            \n            \n                2\n                0\n                0.00\n                50.00\n                49.50\n                50.00\n                50.00\n            \n        \n        \n            \n                1\n                49.50\n                50.00\n            \n            \n                1\n                49.50\n                50.00\n            \n        \n        50.00\n        50.00\n        50.00\n        50.00\n        50.00\n        50.00\n        moneda0\n        placa0\n        \n            \n                01\n                50.00\n                50.00\n                unidadTiem\n            \n            \n                01\n                50.00\n                50.00\n                unidadTiem\n            \n        \n        50.00\n        50.00",
+        "actual": "27/08/2025SI04PRUEBAS TECNICAS SISTEMA REAL CIA LTDA1792146739001114.180.0024114.1815.0017.130.00131.30DOLAR",
+        "path": "/infoFactura[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "fechaEmision",
+        "expected": "01/01/2000",
+        "actual": "27/08/2025",
+        "path": "/infoFactura[0]/fechaEmision[0]/"
+      },
+      {
+        "type": "missing",
+        "element": "dirEstablecimiento",
+        "path": "/infoFactura[0]/dirEstablecimiento"
+      },
+      {
+        "type": "missing",
+        "element": "contribuyenteEspecial",
+        "path": "/infoFactura[0]/contribuyenteEspecial"
+      },
+      {
+        "type": "missing",
+        "element": "comercioExterior",
+        "path": "/infoFactura[0]/comercioExterior"
+      },
+      {
+        "type": "missing",
+        "element": "incoTermFactura",
+        "path": "/infoFactura[0]/incoTermFactura"
+      },
+      {
+        "type": "missing",
+        "element": "lugarIncoTerm",
+        "path": "/infoFactura[0]/lugarIncoTerm"
+      },
+      {
+        "type": "missing",
+        "element": "paisOrigen",
+        "path": "/infoFactura[0]/paisOrigen"
+      },
+      {
+        "type": "missing",
+        "element": "puertoEmbarque",
+        "path": "/infoFactura[0]/puertoEmbarque"
+      },
+      {
+        "type": "missing",
+        "element": "puertoDestino",
+        "path": "/infoFactura[0]/puertoDestino"
+      },
+      {
+        "type": "missing",
+        "element": "paisDestino",
+        "path": "/infoFactura[0]/paisDestino"
+      },
+      {
+        "type": "missing",
+        "element": "paisAdquisicion",
+        "path": "/infoFactura[0]/paisAdquisicion"
+      },
+      {
+        "type": "missing",
+        "element": "guiaRemision",
+        "path": "/infoFactura[0]/guiaRemision"
+      },
+      {
+        "type": "different_value",
+        "element": "razonSocialComprador",
+        "expected": "razonSocialComprador0",
+        "actual": "PRUEBAS TECNICAS SISTEMA REAL CIA LTDA",
+        "path": "/infoFactura[0]/razonSocialComprador[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "identificacionComprador",
+        "expected": "identificacionCompra",
+        "actual": "1792146739001",
+        "path": "/infoFactura[0]/identificacionComprador[0]/"
+      },
+      {
+        "type": "missing",
+        "element": "direccionComprador",
+        "path": "/infoFactura[0]/direccionComprador"
+      },
+      {
+        "type": "missing",
+        "element": "totalSubsidio",
+        "path": "/infoFactura[0]/totalSubsidio"
+      },
+      {
+        "type": "missing",
+        "element": "incoTermTotalSinImpuestos",
+        "path": "/infoFactura[0]/incoTermTotalSinImpuestos"
+      },
+      {
+        "type": "missing",
+        "element": "codDocReembolso",
+        "path": "/infoFactura[0]/codDocReembolso"
+      },
+      {
+        "type": "missing",
+        "element": "totalComprobantesReembolso",
+        "path": "/infoFactura[0]/totalComprobantesReembolso"
+      },
+      {
+        "type": "missing",
+        "element": "totalBaseImponibleReembolso",
+        "path": "/infoFactura[0]/totalBaseImponibleReembolso"
+      },
+      {
+        "type": "missing",
+        "element": "totalImpuestoReembolso",
+        "path": "/infoFactura[0]/totalImpuestoReembolso"
+      },
+      {
+        "type": "different_value",
+        "element": "totalConImpuestos",
+        "expected": "2\n                0\n                0.00\n                50.00\n                49.50\n                50.00\n                50.00\n            \n            \n                2\n                0\n                0.00\n                50.00\n                49.50\n                50.00\n                50.00",
+        "actual": "24114.1815.0017.13",
+        "path": "/infoFactura[0]/totalConImpuestos[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "totalImpuesto",
+        "expected": "2 elementos",
+        "actual": "1 elementos",
+        "path": "/infoFactura[0]/totalConImpuestos[0]/totalImpuesto"
+      },
+      {
+        "type": "missing",
+        "element": "compensaciones",
+        "path": "/infoFactura[0]/compensaciones"
+      },
+      {
+        "type": "missing",
+        "element": "fleteInternacional",
+        "path": "/infoFactura[0]/fleteInternacional"
+      },
+      {
+        "type": "missing",
+        "element": "seguroInternacional",
+        "path": "/infoFactura[0]/seguroInternacional"
+      },
+      {
+        "type": "missing",
+        "element": "gastosAduaneros",
+        "path": "/infoFactura[0]/gastosAduaneros"
+      },
+      {
+        "type": "missing",
+        "element": "gastosTransporteOtros",
+        "path": "/infoFactura[0]/gastosTransporteOtros"
+      },
+      {
+        "type": "different_value",
+        "element": "moneda",
+        "expected": "moneda0",
+        "actual": "DOLAR",
+        "path": "/infoFactura[0]/moneda[0]/"
+      },
+      {
+        "type": "missing",
+        "element": "placa",
+        "path": "/infoFactura[0]/placa"
+      },
+      {
+        "type": "missing",
+        "element": "pagos",
+        "path": "/infoFactura[0]/pagos"
+      },
+      {
+        "type": "missing",
+        "element": "valorRetIva",
+        "path": "/infoFactura[0]/valorRetIva"
+      },
+      {
+        "type": "missing",
+        "element": "valorRetRenta",
+        "path": "/infoFactura[0]/valorRetRenta"
+      },
+      {
+        "type": "different_value",
+        "element": "detalles",
+        "expected": "codigoPrincipal0\n            codigoAuxiliar0\n            descripcion0\n            unidadMedida0\n            50.000000\n            50.000000\n            50.000000\n            50.00\n            50.00\n            \n                \n                \n            \n            \n                \n                    2\n                    0\n                    49.50\n                    50.00\n                    50.00\n                \n                \n                    2\n                    0\n                    49.50\n                    50.00\n                    50.00\n                \n            \n        \n        \n            codigoPrincipal1\n            codigoAuxiliar1\n            descripcion1\n            unidadMedida1\n            50.000000\n            50.000000\n            50.000000\n            50.00\n            50.00\n            \n                \n                \n            \n            \n                \n                    2\n                    0\n                    49.50\n                    50.00\n                    50.00\n                \n                \n                    2\n                    0\n                    49.50\n                    50.00\n                    50.00",
+        "actual": "PROD-1756315893253Producto de prueba técnica - Test sistema real2.50000045.6700000.00114.182415.00114.1817.13",
+        "path": "/detalles[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "detalle",
+        "expected": "2 elementos",
+        "actual": "1 elementos",
+        "path": "/detalles[0]/detalle"
+      },
+      {
+        "type": "missing",
+        "element": "reembolsos",
+        "path": "/reembolsos"
+      },
+      {
+        "type": "missing",
+        "element": "retenciones",
+        "path": "/retenciones"
+      },
+      {
+        "type": "missing",
+        "element": "infoSustitutivaGuiaRemision",
+        "path": "/infoSustitutivaGuiaRemision"
+      },
+      {
+        "type": "missing",
+        "element": "otrosRubrosTerceros",
+        "path": "/otrosRubrosTerceros"
+      },
+      {
+        "type": "missing",
+        "element": "tipoNegociable",
+        "path": "/tipoNegociable"
+      },
+      {
+        "type": "missing",
+        "element": "maquinaFiscal",
+        "path": "/maquinaFiscal"
+      },
+      {
+        "type": "different_value",
+        "element": "infoAdicional",
+        "expected": "campoAdicional0\n        campoAdicional1",
+        "actual": "RAMIREZ DAVALOS Y AV. AMAZONAS EDIFICIO CENTRO AMAZONAS OF. 402pruebas-tecnicas@sistema-real.ecTest técnico sistema real - Timestamp: 1756315893253",
+        "path": "/infoAdicional[0]/"
+      },
+      {
+        "type": "different_value",
+        "element": "campoAdicional",
+        "expected": "2 elementos",
+        "actual": "3 elementos",
+        "path": "/infoAdicional[0]/campoAdicional"
+      },
+      {
+        "type": "extra",
+        "element": "ds:Signature",
+        "path": "/ds:Signature"
+      },
+      {
+        "type": "wrong_order",
+        "element": "elementos entre detalles y infoAdicional",
+        "expected": "reembolsos, retenciones, infoSustitutivaGuiaRemision, otrosRubrosTerceros, tipoNegociable, maquinaFiscal",
+        "actual": "",
+        "path": "/orden"
+      },
+      {
+        "type": "different_value",
+        "element": "atributo xsi:noNamespaceSchemaLocation",
+        "expected": "file:/C:/borrar/xsd/111-xsd-1_V2.1.0.xsd",
+        "actual": "factura_V2.1.0.xsd",
+        "path": "/@xsi:noNamespaceSchemaLocation"
+      }
+    ]
+  },
+  "sriValidation": {
+    "recepcion": {
+      "success": false,
+      "mensajes": []
+    },
+    "autorizacion": {
+      "success": false,
+      "mensajes": []
+    }
+  },
+  "summary": {
+    "overallSuccess": false,
+    "score": 62,
+    "recommendations": [
+      "⚠️ Saltando validación SRI por errores previos",
+      "⚠️ MEDIO: Mejorar coincidencia con XML de referencia",
+      "⚠️ MEDIO: Revisar compatibilidad con ambiente SRI"
+    ]
+  }
+}

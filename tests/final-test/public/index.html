@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Visual SRI - Facturación Electrónica Ecuador</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .main-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .upload-section {
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .upload-section.dragover {
+            background: #e7f3ff;
+            border-color: #007bff;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-input-label {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #007bff;
+            color: white;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .file-input-label:hover {
+            background: #0056b3;
+        }
+
+        .file-name {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .clave-acceso-display {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            display: none;
+        }
+
+        .clave-acceso-display h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .clave-acceso-display .clave {
+            font-family: 'Courier New', monospace;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            word-break: break-all;
+        }
+
+        .buttons-section {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .action-button {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-recepcion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-autorizacion {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .action-button:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .result-box {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            height: 600px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .result-box h3 {
+            margin-bottom: 15px;
+            color: #495057;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+
+        .soap-request {
+            background: #263238;
+            color: #aed581;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            flex: 1;
+            overflow-y: auto;
+            line-height: 1.4;
+        }
+
+        .response-content {
+            background: white;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            flex: 1;
+            overflow-y: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .status-recibida {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-devuelta {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-autorizado {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .status-no-autorizado {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .message-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-left: 4px solid #007bff;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .message-error {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+
+        .message-warning {
+            border-left-color: #ffc107;
+            background: #fff3cd;
+        }
+
+        .json-viewer {
+            font-family: 'Courier New', monospace;
+            font-size: 11px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+
+        .info-pills {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .info-pill {
+            background: #e7f3ff;
+            color: #004085;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        .result-box-content {
+            flex: 1;
+            overflow-y: auto;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+
+        @media (max-width: 768px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .buttons-section {
+                flex-direction: column;
+            }
+            
+            .result-box {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Visual SRI - Facturación Electrónica</h1>
+        
+        <div class="main-card">
+            <!-- Sección de carga de archivo -->
+            <div class="upload-section" id="uploadSection">
+                <div class="file-input-wrapper">
+                    <input type="file" 
+                           id="xmlFile" 
+                           class="file-input" 
+                           accept=".xml"
+                           onchange="handleFileSelect(event)">
+                    <label for="xmlFile" class="file-input-label">
+                        📁 Seleccionar XML Firmado
+                    </label>
+                </div>
+                
+                <div class="file-name" id="fileName">
+                    Ningún archivo seleccionado
+                </div>
+                
+                <p style="margin-top: 10px; color: #6c757d;">
+                    O arrastra y suelta tu archivo XML aquí
+                </p>
+            </div>
+
+            <!-- Display de clave de acceso -->
+            <div class="clave-acceso-display" id="claveAccesoDisplay">
+                <h4>🔑 Clave de Acceso Detectada:</h4>
+                <div class="clave" id="claveAccesoValue"></div>
+            </div>
+
+            <!-- Botones de acción -->
+            <div class="buttons-section">
+                <button class="action-button btn-recepcion" 
+                        id="btnRecepcion" 
+                        onclick="enviarRecepcion()"
+                        disabled>
+                    📤 Enviar a Recepción
+                </button>
+                
+                <button class="action-button btn-autorizacion" 
+                        id="btnAutorizacion" 
+                        onclick="consultarAutorizacion()"
+                        disabled>
+                    🔍 Consultar Autorización
+                </button>
+            </div>
+
+            <!-- Indicador de carga -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Procesando solicitud...</p>
+            </div>
+
+            <!-- Grid de resultados -->
+            <div class="results-grid">
+                <!-- Box de Recepción -->
+                <div class="result-box">
+                    <h3>📥 Recepción de Comprobantes</h3>
+                    
+                    <div id="recepcionContent">
+                        <p style="color: #6c757d; text-align: center; padding: 20px;">
+                            Envía un XML para ver los resultados
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Box de Autorización -->
+                <div class="result-box">
+                    <h3>✅ Autorización de Comprobantes</h3>
+                    
+                    <div id="autorizacionContent">
+                        <p style="color: #6c757d; text-align: center; padding: 20px;">
+                            Primero envía a recepción, luego consulta autorización
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Box de Request SOAP -->
+                <div class="result-box">
+                    <h3>📡 Request SOAP - Recepción</h3>
+                    <div class="soap-request" id="soapRequestRecepcion">
+                        <!-- Se llenará dinámicamente -->
+                        <p style="color: #aed581;">Esperando envío...</p>
+                    </div>
+                </div>
+
+                <!-- Box de Request SOAP Autorización -->
+                <div class="result-box">
+                    <h3>📡 Request SOAP - Autorización</h3>
+                    <div class="soap-request" id="soapRequestAutorizacion">
+                        <!-- Se llenará dinámicamente -->
+                        <p style="color: #aed581;">Esperando consulta...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentFile = null;
+        let currentClaveAcceso = null;
+
+        // Configurar drag and drop
+        const uploadSection = document.getElementById('uploadSection');
+        
+        uploadSection.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadSection.classList.add('dragover');
+        });
+
+        uploadSection.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            uploadSection.classList.remove('dragover');
+        });
+
+        uploadSection.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadSection.classList.remove('dragover');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0 && files[0].name.endsWith('.xml')) {
+                handleFile(files[0]);
+            }
+        });
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleFile(file) {
+            currentFile = file;
+            document.getElementById('fileName').textContent = `📄 ${file.name}`;
+            
+            // Leer el archivo para extraer la clave de acceso
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const content = e.target.result;
+                const claveMatch = content.match(/<claveAcceso>(\d{49})<\/claveAcceso>/);
+                
+                if (claveMatch) {
+                    currentClaveAcceso = claveMatch[1];
+                    document.getElementById('claveAccesoValue').textContent = currentClaveAcceso;
+                    document.getElementById('claveAccesoDisplay').style.display = 'block';
+                    document.getElementById('btnAutorizacion').disabled = false;
+                } else {
+                    document.getElementById('claveAccesoDisplay').style.display = 'none';
+                    alert('⚠️ No se encontró clave de acceso en el XML');
+                }
+            };
+            reader.readAsText(file);
+            
+            // Habilitar botón de recepción
+            document.getElementById('btnRecepcion').disabled = false;
+        }
+
+        async function enviarRecepcion() {
+            if (!currentFile) {
+                alert('Por favor selecciona un archivo XML');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('xml', currentFile);
+
+            // Mostrar loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('btnRecepcion').disabled = true;
+
+            try {
+                const response = await fetch('/api/recepcion', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+                
+                // Mostrar request SOAP
+                document.getElementById('soapRequestRecepcion').innerHTML = 
+                    formatSoapDisplay(data.soapRequest);
+                
+                // Mostrar respuesta
+                displayRecepcionResponse(data);
+                
+                // Si fue recibida, habilitar botón de autorización
+                if (data.estado === 'RECIBIDA' && data.claveAcceso) {
+                    currentClaveAcceso = data.claveAcceso;
+                    document.getElementById('btnAutorizacion').disabled = false;
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al enviar a recepción: ' + error.message);
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('btnRecepcion').disabled = false;
+            }
+        }
+
+        async function consultarAutorizacion() {
+            if (!currentClaveAcceso) {
+                alert('No hay clave de acceso disponible');
+                return;
+            }
+
+            // Mostrar loading
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('btnAutorizacion').disabled = true;
+
+            try {
+                const response = await fetch('/api/autorizacion', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ claveAcceso: currentClaveAcceso })
+                });
+
+                const data = await response.json();
+                
+                // Mostrar request SOAP
+                document.getElementById('soapRequestAutorizacion').innerHTML = 
+                    formatSoapDisplay(data.soapRequest);
+                
+                // Mostrar respuesta
+                displayAutorizacionResponse(data);
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al consultar autorización: ' + error.message);
+            } finally {
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('btnAutorizacion').disabled = false;
+            }
+        }
+
+        function formatSoapDisplay(soapRequest) {
+            if (!soapRequest) return 'No disponible';
+            
+            let html = `<div style="margin-bottom: 15px;">`;
+            html += `<strong style="color: #4fc3f7;">URL:</strong> ${soapRequest.url}<br>`;
+            html += `<strong style="color: #4fc3f7;">Método:</strong> ${soapRequest.method}<br>`;
+            
+            if (soapRequest.xmlBase64Length) {
+                html += `<strong style="color: #4fc3f7;">Tamaño Base64:</strong> ${soapRequest.xmlBase64Length} caracteres<br>`;
+            }
+            
+            if (soapRequest.claveAcceso) {
+                html += `<strong style="color: #4fc3f7;">Clave:</strong> ${soapRequest.claveAcceso}<br>`;
+            }
+            
+            html += `</div>`;
+            html += `<strong style="color: #81c784;">SOAP Envelope:</strong><br><br>`;
+            html += escapeHtml(soapRequest.envelope);
+            
+            return html;
+        }
+
+        function displayRecepcionResponse(data) {
+            let html = '';
+            
+            // Estado
+            const estado = data.estado || 'DESCONOCIDO';
+            const statusClass = estado === 'RECIBIDA' ? 'status-recibida' : 'status-devuelta';
+            html += `<div class="status-badge ${statusClass}">${estado}</div>`;
+            
+            // Info pills
+            html += '<div class="info-pills">';
+            html += `<span class="info-pill">Clave: ${data.claveAcceso ? data.claveAcceso.substring(0, 20) + '...' : 'N/A'}</span>`;
+            html += '</div>';
+            
+            // Mensajes si hay
+            if (data.sriResponse?.comprobantes?.comprobante?.mensajes?.mensaje) {
+                html += '<div style="margin-top: 15px;">';
+                html += '<h4>Mensajes del SRI:</h4>';
+                
+                const mensajes = data.sriResponse.comprobantes.comprobante.mensajes.mensaje;
+                const mensajeArray = Array.isArray(mensajes) ? mensajes : [mensajes];
+                
+                mensajeArray.forEach(msg => {
+                    const msgClass = msg.tipo === 'ERROR' ? 'message-error' : 'message-warning';
+                    html += `<div class="message-item ${msgClass}">`;
+                    html += `<strong>[${msg.identificador}] ${msg.tipo}:</strong> ${msg.mensaje}`;
+                    if (msg.informacionAdicional) {
+                        html += `<br><small>Info adicional: ${msg.informacionAdicional}</small>`;
+                    }
+                    html += '</div>';
+                });
+                html += '</div>';
+            }
+            
+            // Response completa
+            html += '<div class="response-content">';
+            html += '<h4>Respuesta Completa:</h4>';
+            html += '<pre class="json-viewer">' + JSON.stringify(data.sriResponse, null, 2) + '</pre>';
+            html += '</div>';
+            
+            document.getElementById('recepcionContent').innerHTML = html;
+        }
+
+        function displayAutorizacionResponse(data) {
+            let html = '';
+            
+            // Número de comprobantes
+            html += `<div class="info-pills">`;
+            html += `<span class="info-pill">Comprobantes encontrados: ${data.numeroComprobantes || 0}</span>`;
+            html += `</div>`;
+            
+            if (data.autorizacion) {
+                const auth = data.autorizacion;
+                const estado = auth.estado || 'DESCONOCIDO';
+                const statusClass = estado === 'AUTORIZADO' ? 'status-autorizado' : 'status-no-autorizado';
+                
+                html += `<div class="status-badge ${statusClass}" style="margin-top: 10px;">${estado}</div>`;
+                
+                // Detalles de autorización
+                if (auth.numeroAutorizacion) {
+                    html += '<div class="info-pills">';
+                    html += `<span class="info-pill">N° Autorización: ${auth.numeroAutorizacion}</span>`;
+                    html += '</div>';
+                }
+                
+                if (auth.fechaAutorizacion) {
+                    html += `<p style="margin: 10px 0;"><strong>Fecha:</strong> ${new Date(auth.fechaAutorizacion).toLocaleString()}</p>`;
+                }
+                
+                // Mensajes
+                if (auth.mensajes?.mensaje) {
+                    html += '<div style="margin-top: 15px;">';
+                    html += '<h4>Mensajes del SRI:</h4>';
+                    
+                    const mensajes = Array.isArray(auth.mensajes.mensaje) ? 
+                        auth.mensajes.mensaje : [auth.mensajes.mensaje];
+                    
+                    mensajes.forEach(msg => {
+                        const msgClass = msg.tipo === 'ERROR' ? 'message-error' : 'message-warning';
+                        html += `<div class="message-item ${msgClass}">`;
+                        html += `<strong>[${msg.identificador}] ${msg.tipo}:</strong> ${msg.mensaje}`;
+                        if (msg.informacionAdicional) {
+                            html += `<br><small>Info: ${msg.informacionAdicional}</small>`;
+                        }
+                        html += '</div>';
+                    });
+                    html += '</div>';
+                }
+            } else {
+                html += '<p style="color: #dc3545; margin-top: 10px;">No se encontró información de autorización</p>';
+            }
+            
+            // Response completa
+            html += '<div class="response-content">';
+            html += '<h4>Respuesta Completa:</h4>';
+            html += '<pre class="json-viewer">' + JSON.stringify(data.sriResponse, null, 2) + '</pre>';
+            html += '</div>';
+            
+            document.getElementById('autorizacionContent').innerHTML = html;
+        }
+
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Función auxiliar para manejar contenido largo (ya no trunca, solo formatea)
+        function formatContent(content) {
+            return content;
+        }
+    </script>
+</body>
+</html>

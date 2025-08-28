@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura id="comprobante" version="1.1.0">
+  <infoTributaria>
+    <ambiente>1</ambiente>
+    <tipoEmision>1</tipoEmision>
+    <razonSocial>BUSINESSCONNECT S.A.S.</razonSocial>
+    <nombreComercial>BUSINESSCONNECT</nombreComercial>
+    <ruc>1793204144001</ruc>
+    <claveAcceso>1808202501179320414400110010010000000016720949918</claveAcceso>
+    <codDoc>01</codDoc>
+    <estab>001</estab>
+    <ptoEmi>001</ptoEmi>
+    <secuencial>000000001</secuencial>
+    <dirMatriz>RAMIREZ DAVALOS Y AV. AMAZONAS EDIFICIO CENTRO AMAZONAS OF. 402</dirMatriz>
+  </infoTributaria>
+  <infoFactura>
+    <fechaEmision>18/08/2025</fechaEmision>
+    <obligadoContabilidad>SI</obligadoContabilidad>
+    <tipoIdentificacionComprador>04</tipoIdentificacionComprador>
+    <razonSocialComprador>EMPRESA DE PRUEBAS S.A.</razonSocialComprador>
+    <identificacionComprador>1790000001001</identificacionComprador>
+    <totalSinImpuestos>100.00</totalSinImpuestos>
+    <totalDescuento>0.00</totalDescuento>
+    <totalConImpuestos>
+      <totalImpuesto>
+        <codigo>2</codigo>
+        <codigoPorcentaje>4</codigoPorcentaje>
+        <baseImponible>100.00</baseImponible>
+        <tarifa>15.00</tarifa>
+        <valor>15.00</valor>
+      </totalImpuesto>
+    </totalConImpuestos>
+    <propina>0.00</propina>
+    <importeTotal>115.00</importeTotal>
+    <moneda>DOLAR</moneda>
+    <pagos>
+      <pago>
+        <formaPago>20</formaPago>
+        <total>115.00</total>
+        <unidadTiempo>dias</unidadTiempo>
+      </pago>
+    </pagos>
+  </infoFactura>
+  <detalles>
+    <detalle>
+      <codigoPrincipal>SERV001</codigoPrincipal>
+      <descripcion>Servicios de consultoría tecnológica</descripcion>
+      <cantidad>1.000000</cantidad>
+      <precioUnitario>100.000000</precioUnitario>
+      <descuento>0.00</descuento>
+      <precioTotalSinImpuesto>100.00</precioTotalSinImpuesto>
+      <impuestos>
+        <impuesto>
+          <codigo>2</codigo>
+          <codigoPorcentaje>4</codigoPorcentaje>
+          <tarifa>15.00</tarifa>
+          <baseImponible>100.00</baseImponible>
+          <valor>15.00</valor>
+        </impuesto>
+      </impuestos>
+    </detalle>
+  </detalles>
+  <infoAdicional>
+    <campoAdicional nombre="Direccion">RAMIREZ DAVALOS Y AV. AMAZONAS EDIFICIO CENTRO AMAZONAS OF. 402</campoAdicional>
+    <campoAdicional nombre="Telefono">022992900</campoAdicional>
+    <campoAdicional nombre="Email">info@businessconnect.ec</campoAdicional>
+    <campoAdicional nombre="ObservacionesAdicionales">CONTRIBUYENTE RÉGIMEN RIMPE</campoAdicional>
+  </infoAdicional>
+
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" Id="Signature388451">
+    <ds:SignedInfo Id="Signature-SignedInfo878694" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+      <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">
+      </ds:CanonicalizationMethod>
+      <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1">
+      </ds:SignatureMethod>
+      <ds:Reference Id="SignedPropertiesID284288" Type="http://uri.etsi.org/01903#SignedProperties" URI="#Signature388451-SignedProperties775839">
+        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1">
+        </ds:DigestMethod>
+        <ds:DigestValue>E2UPkN8nRDbYOjTsiz8z4Yj5GAw=</ds:DigestValue>
+      </ds:Reference>
+      <ds:Reference URI="#Certificate757092">
+        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1">
+        </ds:DigestMethod>
+        <ds:DigestValue>J40GM0ADq488XXjL7yaV3SgIpSs=</ds:DigestValue>
+      </ds:Reference>
+      <ds:Reference Id="Reference-ID-202132" URI="#comprobante">
+        <ds:Transforms>
+          <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature">
+          </ds:Transform>
+        </ds:Transforms>
+        <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1">
+        </ds:DigestMethod>
+        <ds:DigestValue>9hxfLzLtnZDyMc3jgTSgRclusfU=</ds:DigestValue>
+      </ds:Reference>
+    </ds:SignedInfo>
+    <ds:SignatureValue Id="SignatureValue876936">
+hQ4SasfYlneKgInj4GZxIhUO6uPeZq+xE6kx/FYwdLaVb5syzOEN007LJnSLPg8UeQCG2DpFaOV2
+D7ueqJlNFJDL8zTDY64gmnhNZP5WI5iqZ8P+cAQufxz6pRwUGdePtPnZmycgoteZhaUo08qadL+4
+/jPI0wlWbyooACHJ6+kH9tEO2neEnuufr2Wyzbpd7w0VbdtmjQgFPFdrr84OSAaVc3+Bai3PIBZb
+ZyJOQ5DAfsPsy6ihixp8A74G+/rWdIEcy1eE5Js0lE7l0vaJeiXILPLAJ9F55p9izlTb7KiVx7X8
+1p0QS0Fx1xg70FbYozxiSOuwORnbuZ0m8TX6Nw==
+</ds:SignatureValue>
+    <ds:KeyInfo Id="Certificate757092" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+      <ds:X509Data>
+        <ds:X509Certificate>
+MIIJ5zCCB8+gAwIBAgIIOReIKroaYDUwDQYJKoZIhvcNAQELBQAwgbgxCzAJBgNVBAYTAkVTMUQw
+QgYDVQQHDDtCYXJjZWxvbmEgKHNlZSBjdXJyZW50IGFkZHJlc3MgYXQgd3d3LnVhbmF0YWNhLmNv
+bS9hZGRyZXNzKTEWMBQGA1UECgwNVUFOQVRBQ0EgUy5BLjEVMBMGA1UECwwMVFNQLVVBTkFUQUNB
+MRowGAYDVQQDDBFVQU5BVEFDQSBDQTIgMjAxNjEYMBYGA1UEYQwPVkFURVMtQTY2NzIxNDk5MB4X
+DTI1MDUxMzE3NDAwMFoXDTI3MDUxMzE3NDAwMFowgdExCzAJBgNVBAYTAkVDMR8wHQYDVQQKDBZC
+VVNJTkVTU0NPTk5FQ1QgUy5BLlMuMRgwFgYDVQQMDA9HRVJFTlRFIEdFTkVSQUwxFDASBgNVBAQM
+C0VHQVMgQ0hBVkVaMRUwEwYDVQQqDAxKT1NFIEVEVUFSRE8xGTAXBgNVBAUTEElEQ0VDLTE3MTkz
+MDc3ODUxITAfBgNVBAMMGEpPU0UgRURVQVJETyBFR0FTIENIQVZFWjEcMBoGA1UEYQwTVkFURUMt
+MTc5MzIwNDE0NDAwMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMnr+zv348TPcjfF
+5Z2cUcIITLNhYrFJ1FY2icWFVQ2vWfS0eMwZDfumwMaeWL39b2RFAa8VVPL4db2GrAe+AiOI5woL
+oLGtTJ/0EMpPv2hC10c7PSnHZCuQfJ80L0Jlcni5S1qBuXW65Ld8+Lo4H3cYoxis56dsvF0rPCON
+i/I8ZUxYSchCxaTDT9MHX+68OD+5qZCYkb18UgWmN3+l3HNU/A81SbjkctyarO/as+OAdxb8yOJR
+azcAxN+MZg6YD7kf23GRZBW8yapBJzXASTUp39+AZFUJ+Qa2x4xIh5Znv+A+FYuelh3fBNh4jVOP
+5js8Nl1KwrTv0ZtLOgJ65gUCAwEAAaOCBNgwggTUMBsGCysGAQQBgvE2ZgMBBAwMCjE3MTkzMDc3
+ODUwHgYLKwYBBAGC8TZmAwsEDwwNMTc5MzIwNDE0NDAwMTCB1wYIKwYBBQUHAQEEgcowgccwVQYI
+KwYBBQUHMAKGSWh0dHA6Ly93d3cudWFuYXRhY2EuY29tL3B1YmxpYy9kb3dubG9hZC90c3BfY2Vy
+dGlmaWNhdGVzL3N1Ym9yZGluYXRlMS5jcnQwNgYIKwYBBQUHMAGGKmh0dHA6Ly9vY3NwMS51YW5h
+dGFjYS5jb20vcHVibGljL3BraS9vY3NwLzA2BggrBgEFBQcwAYYqaHR0cDovL29jc3AyLnVhbmF0
+YWNhLmNvbS9wdWJsaWMvcGtpL29jc3AvMB0GA1UdDgQWBBSOs9TkEps6depSAPaYFJH7LXzjDjAM
+BgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFH1X52BzzgdGqeKjaPDhEbJ0knP9MIGOBgNVHSAEgYYw
+gYMwgYAGDCsGAQQBgvE2ZgIDATBwMDcGCCsGAQUFBwIBFitodHRwczovL3d3dy51YW5hdGFjYS5j
+b20vcHVibGljL3BraS9kcGMtZWMvMDUGCCsGAQUFBwICMCkMJ0NFUlRJRklDQURPIERFIFJFUFJF
+U0VOVEFOVEUgRU4gQVJDSElWTzCBjwYDVR0fBIGHMIGEMECgPqA8hjpodHRwOi8vY3JsMS51YW5h
+dGFjYS5jb20vcHVibGljL3BraS9jcmwvQ0Eyc3Vib3JkaW5hZGEuY3JsMECgPqA8hjpodHRwOi8v
+Y3JsMi51YW5hdGFjYS5jb20vcHVibGljL3BraS9jcmwvQ0Eyc3Vib3JkaW5hZGEuY3JsMA4GA1Ud
+DwEB/wQEAwIF4DAdBgNVHSUEFjAUBggrBgEFBQcDAgYIKwYBBQUHAwQwggIZBgNVHREEggIQMIIC
+DIEWYmNvbm5lY3RjYWxsQGdtYWlsLmNvbaAbBgsrBgEEAYLxNmYDAaAMDAoxNzE5MzA3Nzg1oB0G
+CysGAQQBgvE2ZgMCoA4MDEpPU0UgRURVQVJET6AVBgsrBgEEAYLxNmYDA6AGDARFR0FToBcGCysG
+AQQBgvE2ZgMEoAgMBkNIQVZFWqAgBgsrBgEEAYLxNmYDBaARDA9HRVJFTlRFIEdFTkVSQUygcwYL
+KwYBBAGC8TZmAwegZAxiQkFSUklPOiBMQSBNQVJJU0NBTCBDQUxMRTogUkFNSVJFWiBEQVZBTE9T
+IE5NRVJPOiAxMzYgSU5URVJTRUNDSU46IEFWLiBBTUFaT05BUyBFRElGSUNJTzogQ0VOVFJPIEGg
+HwYLKwYBBAGC8TZmAwigEAwOMDA1OTM5NjI5NjYzMDGgMAYLKwYBBAGC8TZmAwmgIQwfRElTVFJJ
+VE8gTUVUUk9QT0xJVEFOTyBERSBRVUlUT6AnBgsrBgEEAYLxNmYDCqAYDBZCVVNJTkVTU0NPTk5F
+Q1QgUy5BLlMuoB4GCysGAQQBgvE2ZgMLoA8MDTE3OTMyMDQxNDQwMDGgEwYLKwYBBAGC8TZmAwyg
+BAwCRUOgJAYLKwYBBAGC8TZmAzKgFQwTUkVQUkVTRU5UQU5URSBMRUdBTKAYBgsrBgEEAYLxNmYD
+M6AJDAdBUkNISVZPMA0GCSqGSIb3DQEBCwUAA4ICAQBToqj9+hLtC1lkoXuOwpKyPbt1yLPjHRDs
+7vnfqVQOHazsaurVmNjOHINu8aCfTG5tka5jpCy/jQXYThRnMSf5VxsSAyLE3Z+p9o9Apghq2E6H
+s1CZqzZGjELvJzCckCJ0BjAApCS1KVZq8iglbQBHxSrwi0Bx78zTZwoPQu6kATlSDwfSt1qIfLfK
+0fv/BoiYrhVkkUEM2ysA/a+ycJobX0k3nCaebV/fljhX8a8G2Dd0FGttiDIPiTbmv4lBG812RAJR
+Y/adRyOMRg3en8QP5IpTDun2Blgw8LrkAN7Xvht4dFpreL9psDja6ucEKUT72SoP2O5Li7YKA5kC
+mncwXifO0G15M1vnnwrFksK/hx5UaRaMYnQq9HYbs/0q37f008elNbI9sIgDKKwH00n3g4O/NQi3
+q6Gtttlx9t+HdAtOK6vjnEp+b43eg+oI08HLFHd6VmnP5ohOsZ3CtvWb/d7dXuLqXmtUwfVnc7Dc
+NmlxTh/s81YYsgiaHkHJ5qFY5lXvcfTmuXhTeGfIPp5VTe2aPtz6UAm/x0QKsn8tZOjrnk7Kl8Xw
+7rG1eZKrq9kvIWH/kCPmDMJPcjYg/OfSxsbIMgBQMk4ExQJgahIJ5OVlhDa2m3w1ZGlaKjKrHv+6
+V33JG93Tmd6kYqDmB5ppgcjG3W5DZ+eMcB0Cshu4+A==
+</ds:X509Certificate>
+      </ds:X509Data>
+      <ds:KeyValue>
+        <ds:RSAKeyValue>
+          <ds:Modulus>
+AMnr+zv348TPcjfF5Z2cUcIITLNhYrFJ1FY2icWFVQ2vWfS0eMwZDfumwMaeWL39b2RFAa8VVPL4
+db2GrAe+AiOI5woLoLGtTJ/0EMpPv2hC10c7PSnHZCuQfJ80L0Jlcni5S1qBuXW65Ld8+Lo4H3cY
+oxis56dsvF0rPCONi/I8ZUxYSchCxaTDT9MHX+68OD+5qZCYkb18UgWmN3+l3HNU/A81Sbjkctya
+rO/as+OAdxb8yOJRazcAxN+MZg6YD7kf23GRZBW8yapBJzXASTUp39+AZFUJ+Qa2x4xIh5Znv+A+
+FYuelh3fBNh4jVOP5js8Nl1KwrTv0ZtLOgJ65gU=
+</ds:Modulus>
+          <ds:Exponent>AQAB</ds:Exponent>
+        </ds:RSAKeyValue>
+      </ds:KeyValue>
+    </ds:KeyInfo>
+    <ds:Object Id="Signature388451-Object761794">
+      <etsi:QualifyingProperties Target="#Signature388451">
+        <etsi:SignedProperties Id="Signature388451-SignedProperties775839" xmlns:etsi="http://uri.etsi.org/01903/v1.3.2#" xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+          <etsi:SignedSignatureProperties>
+            <etsi:SigningTime>2025-08-18T23:15:32-05:00</etsi:SigningTime>
+            <etsi:SigningCertificate>
+              <etsi:Cert>
+                <etsi:CertDigest>
+                  <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                  <ds:DigestValue>tZI9qjuAcHRVk9GbrZ/SnfKfIro=</ds:DigestValue>
+                </etsi:CertDigest>
+                <etsi:IssuerSerial>
+                  <ds:X509IssuerName>CN=UANATACA CA2 2016,OU=TSP-UANATACA,O=UANATACA S.A.,C=ES</ds:X509IssuerName>
+                  <ds:X509SerialNumber>4113906501718532000</ds:X509SerialNumber>
+                </etsi:IssuerSerial>
+              </etsi:Cert>
+            </etsi:SigningCertificate>
+          </etsi:SignedSignatureProperties>
+          <etsi:SignedDataObjectProperties>
+            <etsi:DataObjectFormat ObjectReference="#Reference-ID-202132">
+              <etsi:Description>Nube Digital Tel.22992900</etsi:Description>
+              <etsi:MimeType>text/xml</etsi:MimeType>
+            </etsi:DataObjectFormat>
+          </etsi:SignedDataObjectProperties>
+        </etsi:SignedProperties>
+      </etsi:QualifyingProperties>
+    </ds:Object>
+  </ds:Signature></factura>
